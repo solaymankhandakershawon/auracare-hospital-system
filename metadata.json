@@ -1,0 +1,6 @@
+{
+  "name": "AuraHealth Hospital & Telemedicine Management",
+  "description": "Luxury Hospital Management System with doctor serial booking, medical records vault, automated notifications, 2FA security, doctor dashboard, online payment, and real-time video consultation.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

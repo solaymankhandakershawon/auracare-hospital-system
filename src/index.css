@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --editorial-bg: #FDFCFB;
+    --editorial-card: #FFFFFF;
+    --editorial-card-warm: #F9F7F2;
+    --editorial-card-oat: #F1EDE4;
+    --editorial-border: #E5E1D8;
+    --editorial-border-light: #EDE8DF;
+    --editorial-text: #1B2430;
+    --editorial-muted: #5C6573;
+    --editorial-gold: #C5A059;
+    --editorial-gold-dark: #A8833C;
+    --editorial-gold-light: #F4EAD4;
+    --editorial-emerald: #1B4D3E;
+    --editorial-emerald-light: #EBF3F0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FDFCFB;
+    color: #1B2430;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'Hind Siliguri', serif;
+  }
+}
