@@ -241,14 +241,16 @@ export const HospitalProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const tokenCode = 'AUR-' + Math.floor(1000 + Math.random() * 9000);
     const appointmentId = 'apt-' + Date.now();
 
+    const isInPerson = data.type === 'in-person';
     const newAppointment: Appointment = {
       ...data,
       id: appointmentId,
       tokenCode,
       serialNumber: newSerialNo,
       status: 'confirmed',
-      paymentStatus: data.paymentMethod && data.paymentMethod !== 'Counter' ? 'paid' : 'counter',
-      transactionId: data.paymentMethod && data.paymentMethod !== 'Counter' ? 'TRX' + Math.random().toString(36).substring(2, 9).toUpperCase() : undefined,
+      paymentStatus: isInPerson ? 'counter' : (data.paymentMethod && data.paymentMethod !== 'Counter' ? 'paid' : 'paid'),
+      paymentMethod: isInPerson ? 'Counter' : (data.paymentMethod || 'bKash'),
+      transactionId: isInPerson ? undefined : ('TRX' + Math.random().toString(36).substring(2, 9).toUpperCase()),
       createdAt: new Date().toISOString(),
       backedUpToServer: true,
     };
